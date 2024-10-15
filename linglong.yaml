@@ -1,0 +1,35 @@
+version: "1.0"
+package:
+  id: vip.evdo.deepin.linyaps
+  name: 医维度
+  version: 1.0.0.1
+  kind: app
+  description: 医维度
+command:
+  - /opt/apps/vip.evdo.deepin.linyaps/files/bin/start.sh
+base: org.deepin.foundation/20.0.0
+sources:
+  - kind: file
+    url: https://pro-store-packages.uniontech.com/appstore/pool/appstore/v/vip.evdo.deepin/vip.evdo.deepin_1.0.0.1_all.deb
+    digest: d2563efbbe58c4da565ada24d8d60d1323b5f2019634925e749225f239649154
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/b/brotli/libbrotli1_1.0.7.1-1+eagle_amd64.deb
+    digest: d0164ef22361cbaf7421adab98ecc52dd0013dc656efcd1993afe4262c13c330
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/i/icu/libicu70_70.1-2_amd64.deb
+    digest: 413244f007c488d0c54c952239e2511118cbabb52821d3150fa4d3325595b551
+  - kind: file
+    url: https://community-packages.deepin.com/deepin/apricot/pool/main/u/util-linux/util-linux-extra_2.38.1-1.1_amd64.deb
+    digest: 489bc82e8e2d2d00cc216a38240b738958871e94d5cc4a1b7724095adb9e9560
+  - kind: file
+    url: https://pro-store-packages.uniontech.com/appstore/pool/appstore/u/uniontech.ca.certificates.chain/ca-certificates-uniontech_1.0.4-1_all.deb
+    digest: 981c39833e80ffd4c15fe75155e07e02b4f31d2db881e6e710bfa435391b6c3d
+build: |-
+  export LINGLONG_RAW_ID="vip.evdo.deepin"
+  export LINGLONG_APP_ID="vip.evdo.deepin.linyaps"
+  export LINGLONG_APP_NAME="医维度"
+  export LINGLONG_APP_VERSION="1.0.0.1"
+  export LINGLONG_APP_KIND="app"
+  export LINGLONG_APP_DESC="医维度"
+  export LINGLONG_COMMAND="/opt/apps/vip.evdo.deepin.linyaps/files/bin/start.sh"
+  exec /project/build.sh
